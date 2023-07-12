@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="panel.css">
+  <title>Magination</title>
+</head>
+
+<body>
+  <script src="index.js" defer></script>
+  <div class="main flex">
+    <div class="right">
+      <!-- right panel code  -->
+
+      <div class="right-pannel">
+        <!-- <div class="logo-div">
+          <img src="assets/images/maxweave logo 1.jpg" class="logo" alt="">
+        </div> -->
+        <ul class="list-none flex colunm list-icon">
+          <li class="menu-panel">
+            <img class="icon" src="assets/Assert/bar.png" alt="bar" id="sideBar" />
+          </li>
+          <li class="menu-panel">
+            <i class="fa-solid fa-pencil icon" id="pencil" style="color: #ffffff;"></i>
+          </li>
+          <li class="menu-panel"><img class="icon" src="assets/Assert/cross.png" id="expend" alt="" /></li>
+          <li class="menu-panel"><img class="icon" src="assets/Assert/square.png" id="square" alt="" /></li>
+          <li class="menu-panel"><img class="icon" src="assets/Assert/can.png" id="can" alt="" /></li>
+          <li class="menu-panel">
+            <img class="icon" src="assets/Assert/Insert & Remove.png" id="insert" alt="weave" />
+          </li>
+          <li class="menu-panel">
+            <img class="icon" style="height: 30px; " src="assets/Assert/fx.png" id="fx" alt="fx" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="left" id="grid-nav-content">
+      <div class="nav">
+        <nav id="nav" class="navbar flex justify-around">
+          <ul class="list-none flex list-menu">
+            <li class="menu-item  relative">
+              <p class="menu-click " id="file">File <i class="fa-solid fa-caret-down text-black"></i></p>
+              <div class="toggle-menu none" id="File-menu">
+                <ul class="list-none flex colunm dropdown-list">
+                  <li class="dropdown-item" id="new-file">
+                    <div class="flex item-menu item-center" id="modal-trigger">
+                      <i class="fa-regular fa-file"></i>
+                      <div class="flex item-center justify-between">
+                        <p>New</p>
+                      </div>
+                    </div>
+                  </li>
+                  <hr>
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center" id="modal-trigger">
+                      <i class="fa-regular fa-folder-open capitalize"></i>
+                      <p>open</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-floppy-disk"></i>
+                      <p>Save</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-floppy-disk"></i>
+                      <p>Save as</p>
+                    </div>
+                  </li>
+                  <hr>
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-sd-card"></i>
+                      <p>Save Simualation</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item relative">
+                    <div id="toggle-menu" class="flex item-center justify-between sub-toggle">
+
+                      <p><i class="fa-solid fa-clock-rotate-left"></i> Recent </p><i
+                        class="fa-solid fa-caret-right"></i></i>
+                    </div>
+                    <div id="sub-menu" class="absolute none allSubMenu">
+                      <ul class="list-none flex colunm dropdown-list">
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <!-- <i class="fa-solid fa-floppy-disk"></i> -->
+                            <p>Design-1</p>
+                          </div>
+                        </li>
+                        <hr />
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <!-- <i class="fa-regular fa-floppy-disk"></i> -->
+                            <p>Design-2</p>
+                          </div>
+                        </li>
+                        <hr />
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <!-- <i class="fa-solid fa-rotate-left"></i> -->
+                            <p>Design-3</p>
+
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <hr>
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-file-import"></i>
+                      <p>Import Design</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-file-export"></i>
+                      <p>Export Design</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-print"></i>
+                      <p>Print</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-circle-xmark"></i>
+                      <p>close</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Edit -->
+
+
+            <li class="menu-item relative">
+              <p class="menu-click" id="edit">Edit <i class="fa-solid fa-caret-down text-black"></i></p>
+              <div class="toggle-menu none" id="Edit-menu">
+                <ul class="list-none flex colunm dropdown-list">
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-undo"></i>
+                      <p>Undo</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-redo"></i>
+                      <p>Redo</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-cut"></i>
+                      <p>Cut</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-copy"></i>
+                      <p>Copy</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-paste"></i>
+                      <p>Paste</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-trash-alt"></i>
+                      <p>Delete</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-clone"></i>
+                      <p>Duplicate</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-edit"></i>
+                      <p>Edit Salvage</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-check-square"></i>
+                      <p>Select All</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-square"></i>
+                      <p>Select None</p>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+            
+            <!-- view -->
+            <li class="menu-item relative">
+              <p class="menu-click">View <i class="fa-solid fa-caret-down text-black"></i></p>
+
+              <div class="toggle-menu none" id="View-Menu">
+                <ul class="list-none flex colunm dropdown-list">
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-compress-arrows-alt"></i>
+                      <p onclick="fullscreen()">Fit to Screen</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-scroll"></i>
+                      <p>Scrollbar</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-keyboard"></i>
+                      <p>Keyboard Shortcut</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-lightbulb"></i>
+                      <p>Tips</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-window-maximize"></i>
+                      <p>Statusbar</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-building"></i>
+                      <p>Rural</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-vr-cardboard"></i>
+                      <p>Simulation</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item relative">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-toolbox"></i>
+                      <div id="toggle-toolbar" class="flex item-center justify-between sub-toggle">
+                        <p>Toolbar </p><i class="fa-solid fa-caret-right"></i>
+                      </div>
+                      <div id="sub-toolbar" class="absolute none allSubMenu">
+                        <ul class="list-none flex colunm dropdown-list">
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <i class="fa-solid fa-paint-brush"></i>
+                              <p>Drawing Toolbar</p>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <i class="fa-solid fa-pen"></i>
+                              <p>Design Toolbar</p>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <i class="fa-regular fa-palette"></i>
+                              <p>Color Palette</p>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <i class="fa-regular fa-folder-open"></i>
+                              <p>Open Color Palette</p>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <i class="fa-regular fa-save"></i>
+                              <p>Save Color Palette</p>
+                            </div>
+                          </li>
+                        </ul>
+
+                      </div>
+
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item relative">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-puzzle-piece"></i>
+                      <div id="toggle-part" class="flex item-center justify-between sub-toggle">
+                        <p>Part</p><i class="fa-solid fa-caret-right"></i>
+                      </div>
+                      <div id="sub-part" class="absolute none allSubMenu">
+                        <ul class="list-none flex colunm dropdown-list">
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-draft" class="menu-checkbox w-full">
+                              <label for="checkbox-draft">
+                                <i class="fa-solid fa-file-alt"></i>
+                                Draft
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-reed" class="menu-checkbox">
+                              <label for="checkbox-reed">
+                                <i class="fa-solid fa-book"></i>
+                                Reed
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-skipped-dent" class="menu-checkbox">
+                              <label for="checkbox-skipped-dent">
+                                <i class="fa-solid fa-eraser"></i>
+                                Skipped Dent
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-pegplan" class="menu-checkbox">
+                              <label for="checkbox-pegplan">
+                                <i class="fa-solid fa-columns"></i>
+                                Pegplan
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-warp-color" class="menu-checkbox">
+                              <label for="checkbox-warp-color">
+                                <i class="fa-regular fa-palette"></i>
+                                warp Color
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-weft-color" class="menu-checkbox">
+                              <label for="checkbox-weft-color">
+                                <i class="fa-regular fa-palette"></i>
+                                Weft Color
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-salvage" class="menu-checkbox">
+                              <label for="checkbox-salvage">
+                                <i class="fa-solid fa-recycle"></i>
+                                Salvage
+                              </label>
+                            </div>
+                          </li>
+                          <hr />
+                          <li class="dropdown-item">
+                            <div class="flex item-menu item-center">
+                              <input type="checkbox" id="checkbox-function" class="menu-checkbox">
+                              <label for="checkbox-function">
+                                <i class="fa-solid fa-cogs"></i>
+                                Function
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+
+
+                      </div>
+
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-clipboard"></i>
+                      <p>Clipboard Weave</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-minimize"></i>
+                      <p>Actual Size</p>
+                    </div>
+                  </li>
+
+                </ul>
+
+              </div>
+            </li>
+            <!-- Design -->
+            <li class="menu-item relative">
+              <p class="menu-click">Design <i class="fa-solid fa-caret-down text-black"></i></p>
+              <div class="toggle-menu none" id="Design-Menu">
+                <ul class="list-none flex colunm dropdown-list">
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-palette"></i>
+                      <p>Pattern Editor</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-file-alt"></i>
+                      <p>Warp Editor</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-th"></i>
+                      <p>Weft Editor</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-table"></i>
+                      <p>Draft Editor Numeric</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-regular fa-th-large"></i>
+                      <p>Draft Editor Numeric Grid</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-sitemap"></i>
+                      <p>Page Plan Num Editor</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-edit"></i>
+                      <p>Edit Design</p>
+                    </div>
+                  </li>
+                  <hr />
+                  <li class="dropdown-item">
+                    <div class="flex item-menu item-center">
+                      <i class="fa-solid fa-code-branch"></i>
+                      <p>Weave Generator</p>
+                    </div>
+                  </li>
+                </ul>
+
+
+              </div>
+            </li>
+            
+          </ul>
+          <!-- <div class="middle-menu">
+            <ul class="list-none menu-list flex item-center justify-center">
+  
+              <li class="middle-item"><i class="fa-solid fa-rotate-left middle-icon"></i></i></li>
+              <li class="middle-item"><i class="fa-solid fa-rotate-right middle-icon"></i></li>
+              <li class="middle-item"><button class="btn-purple">Play <i class="fa-solid fa-play "></i></button></i></li>
+
+              <li><i class="fa-solid fa-clock middle-icon"></i></li>
+            </ul>
+          </div> -->
+          <ul class="list-none flex list-icon-left">
+            <!-- <li>
+              <img src="assets/Assert/Expand.png" alt="expend" class="icon" />
+            </li>
+            <li>
+              <img src="assets/Assert/Compress.png" alt="" class="icon" />
+            </li> -->
+            <!-- <li><i class="fa-solid fa-copy icon"></i></li> -->
+            <li><i class="fa-regular fa-clone icon"></i></li>
+            <li><i class="fa-solid fa-file-code icon"></i></li>
+            <!-- <li>
+              <img src="assets/Assert/build.png" height="25px" alt="" class="icon" />
+            </li>
+            <li>
+              <img src="assets/Assert/Grod On.png" alt="grod-on" class="icon" />
+            </li> -->
+            <!-- <li>
+              <img src="assets/Assert/Simulation.png" alt="simualation" class="icon" />
+            </li>
+            <li>
+              <img src="assets/Assert/Blenket.png" alt="" class="icon" />
+            </li> -->
+            <li>
+              <img src="assets/Assert/Home_seting.png" alt="" class="icon nav-icon" />
+            </li>
+            <li>
+              <img src="assets/Assert/Full-screen.png" alt="" class="icon nav-icon" id="full-screen-icon" />
+            </li>
+          </ul>
+          <div id="bottom-pannel"></div>
+        </nav>
+      </div>
+      <div class="main-content chessboard" id="main-content">
+
+        <div id="first-column-container">
+          <div id="weft-color-container">
+            <canvas id="weft-color-canvas" width="30"></canvas>
+          </div>
+          <div id="weft-color-side-container">
+            <canvas id="weft-color-side-canvas" width="10"></canvas>
+          </div>
+
+          <div id="weft-scale-container">
+            <canvas id="weft-scale-canvas" width="20"></canvas>
+          </div>
+        </div>
+        <div class="second-column-container">
+          <div class="main-content-column">
+            <div id="left-salvage">
+              <div id="l-salvage-weft-subparent">
+                <canvas id="l-salvage-weft-canvas" height="80" width="40"></canvas>
+              </div>
+              <div id="l-salvage-dent-container">
+                <div id="l-salvage-dent-canvas-container">
+                  <canvas id="l-salvage-dent-canvas" height="20" width="40"></canvas>
+                </div>
+                <div id="l-salvage-dent-click-canvas-container">
+                  <canvas id="l-salvage-dent-click-canvas" height="10" width="40"></canvas>
+                </div>
+              </div>
+
+              <div id="l-salvage-main-subparent">
+
+                <canvas id="l-salvage-main-canvas" height="600" width="40"></canvas>
+              </div>
+            </div>
+
+            <div id="main-grid">
+              <div id="weftSubParent">
+                <canvas id="weft-canvas" height="80" width="1400"></canvas>
+              </div>
+
+              <div id="main-dent-container">
+                <div id="dent-container">
+                  <div id="dentSubParent">
+                    <canvas id="dent-canvas" height="20" width="1400"></canvas>
+                  </div>
+                </div>
+                <div id="dent-click-canvas-container">
+                  <canvas id="dent-click-canvas" height="10" width="1400"></canvas>
+                </div>
+              </div>
+
+              <div class="canvas-content" id="wrapper">
+                <div id="subParent">
+                  <canvas id="main-canvas" height="600" width="1400"></canvas>
+                </div>
+              </div>
+
+              <div id="warp-scale-container">
+                <canvas id="warp-scale-canvas" height="20"></canvas>
+              </div>
+
+              <div id="warp-color-container">
+                <canvas id="warp-color-canvas" height="30"></canvas>
+              </div>
+              <div id="horizontal-scroll-container">
+                <div id="horizontal-scroll-child"></div>
+              </div>
+
+            </div>
+
+            <div id="sequence-edit" class="modal">
+              <div class="modal-content">
+                <!-- Modal content goes here -->
+                <div class="close">
+                  <span class="close-button">&times;</span>
+                </div>
+                <div class="modal-title">
+                  <p>New File</p>
+                </div>
+                <div id="modal-desc">
+                  <form action="#" id="warpWeft-Edit">
+                    <textarea rows="4" cols="4" name="warpWeftEditValue">
+                        </textarea>
+
+                    <div class="totalContainer-warp">
+                      <label for="totalwarp">Total Warp</label>
+                      <input type="number" id="totalwarp">
+                    </div>
+                    <div class="btn">
+                      <button class="btn-submit" type="button">apply</button>
+                      <button type="submit" class="btn-submit">Ok</button>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- right click handlers  -->
+
+            <div class="context-menu absolute none" id="warpcolor-context-menu">
+              <div class="context-content">
+                <ul class="list-none flex colunm dropdown-list">
+
+                  <li class="dropdown-item menu-side">
+                    copy Weft yarn To warp
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side">
+                    copy warp yarn To Weft
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="warpcolor-sequence-trigger">
+                    Edit Sequance
+                  </li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+
+
+            <div class="context-menu absolute none" id="weftcolor-context-menu">
+              <div class="context-content">
+                <ul class="list-none flex colunm dropdown-list">
+
+                  <li class="dropdown-item menu-side">
+                    copy Weft yarn To warp
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side">
+                    copy warp yarn To Weft
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="weftcolor-sequence-trigger">
+                    Edit Sequance
+                  </li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+
+            <div class="context-menu absolute none" id="weftSubContext">
+              <div class="context-content">
+                <ul class="list-none flex  colunm dropdown-list">
+
+                  <li class="dropdown-item menu-side">
+                    Cut
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side">
+                    Copy
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wsSequence-trigger">
+                    Paste
+                  </li>
+                  <hr>
+                  <li class="dropdown-item menu-side" id="wsName-trigger">
+                    Name
+                  </li>
+                  <hr>
+                  <li class="dropdown-item menu-side" id="wsOpenLibrary-trigger">
+                    Open from Liabrary
+                  </li>
+                  <hr>
+                  <li class="dropdown-item menu-side" id="wsSaveLiabrary-trigger">
+                    Save To Liabrary
+                  </li>
+                  <hr>
+                  <li class="dropdown-item menu-side" id="wsEditDraft-trigger">
+                    Edit Draft Num
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wsEditGrid-trigger">
+                    Edit Draft Num Grid
+                  </li>
+                  <hr>
+                  <li class="dropdown-item menu-side" id="wsInsert-trigger">
+                    Insert
+                  </li>
+                  <hr>
+                  <li class="dropdown-item menu-side" id="wsEditDesign-trigger">
+                    Edit Design
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div class="context-menu absolute none" id="mainContextMenu">
+              <div class="context-content">
+                <ul class="list-none flex colunm dropdown-list">
+
+                  <li class="dropdown-item menu-side">
+                    Cut
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side">
+                    Copy
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="mcPaste-trigger">
+                    Paste
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="mcName-trigger">
+                    Name
+
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="mcOpenLibrary-trigger">
+                    Open From Library
+
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="mcSaveLibrary-trigger">
+                    Save To Library
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side relative" id="design-view">
+                    <div id="design-menu" class="flex item-center justify-between">
+                      Design View <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div id="sub-context-design" class="absolute none sub-context-toggle all-context-submenu">
+
+                      <ul class="list-none flex colunm dropdown-list">
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <input type="radio" name="radio-design-view" value="radio-weave" checked>
+                            <label for="radio-weave">Weave</label>
+                          </div>
+                        </li>
+                        <hr>
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <input type="radio" name="radio-design-view" value="radio-color">
+                            <label for="radio-color">Color</label>
+                          </div>
+                        </li>
+                        <hr>
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <input type="radio" name="radio-design-view" value="radio-interlacement">
+                            <label for="radio-interlacement">Interlacement</label>
+
+                          </div>
+                        </li>
+                      </ul>
+
+
+                    </div>
+
+
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="mcInsert-trigger">
+                    Insert
+
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="mcEditDesign-trigger">
+                    Edit Design
+
+                  </li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+            <div class="context-menu absolute none" id="warpCanvasMenu">
+              <div class="context-content">
+                <ul class="list-none flex colunm dropdown-list">
+
+                  <li class="dropdown-item menu-side">
+                    Cut
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side">
+                    Copy
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wcPaste-trigger">
+                    Paste
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wcName-trigger">
+                    Name
+
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wcOpenLibrary-trigger">
+                    Open From Library
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wcSaveLibrary-trigger">
+                    Save To Library
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side" id="wcEditPegplan-trigger">
+                    Edit Pegplan Num
+                  </li>
+                  <hr />
+                  <li class="dropdown-item menu-side relative" id="design-view">
+                    <div class="flex item-center justify-between">
+                      <p> Insert </p><i class="fa-solid fa-angle-right"></i>
+                    </div>
+                    <div id="sub-context-design" class="absolute none sub-context-toggle all-context-submenu">
+                      <ul class="list-none flex colunm dropdown-list">
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <input type="radio" name="radio-design-view" value="radio-weave" checked>
+                            <label for="radio-weave">Weave</label>
+                          </div>
+                        </li>
+                        <hr>
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <input type="radio" name="radio-design-view" value="radio-color">
+                            <label for="radio-color">Color</label>
+                          </div>
+                        </li>
+                        <hr>
+                        <li class="dropdown-item">
+                          <div class="flex item-menu item-center">
+                            <input type="radio" name="radio-design-view" value="radio-interlacement">
+                            <label for="radio-interlacement">Interlacement</label>
+
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <hr />
+
+                  <li class="dropdown-item menu-side" id="mcEditDesign-trigger">
+                    Edit Design
+                  </li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div id="right-salvage">
+              <div id="r-salvage-weft-subparent">
+                <canvas id="r-salvage-weft-canvas" height="80" width="40"></canvas>
+              </div>
+              <div id="r-salvage-dent-container">
+                <div id="r-salvage-dent-canvas-container">
+                  <canvas id="r-salvage-dent-canvas" height="20" width="40"></canvas>
+                </div>
+                <div id="r-salvage-dent-click-canvas-container">
+                  <canvas id="r-salvage-dent-click-canvas" height="10" width="40"></canvas>
+                </div>
+
+                <div id="r-salvage-main-container">
+                  <div id="r-salvage-main-subparent">
+                    <canvas id="r-salvage-main-canvas" height="600" width="40"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div id="pegplan-column">
+
+            <canvas id="warp-canvas" class="relative" height="600" width="80"></canvas>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="color-penal item-center">
+        <div id="form-color-panel" class="flex item-center">
+          <p class="title-palet text-center text-black">
+            Warp &nbsp;
+          </p>
+          <i class="fa-solid fa-left-long text-black" id="warp-color-row-left-arrow"></i>
+          <div id="warp-color-row">
+
+          </div>
+        
+          &nbsp; &nbsp;
+          <i class="fa-solid fa-right-long text-black" id="warp-color-row-right-arrow"></i>
+
+          <div class="color-items relative">
+        
+            <button class="color-item"  id="selected-warp-color">A ||</button>
+          </div>
+          <div class="color-items relative">
+        
+            <button class="color-item"  id="selected-weft-color">A =</button>
+          </div>
+          <p class="title-palet weft-title">
+            Weft
+          </p>
+          &nbsp;
+          <i class="fa-solid fa-left-long text-black" id="weft-color-row-left-arrow"></i>
+          &nbsp; &nbsp;
+          <div id="weft-color-row">
+          </div>
+          <i class="fa-solid fa-right-long text-black" id="weft-color-row-right-arrow"></i>
+        </div>
+        <!-- statusbar -->
+        <div class="statusbar flex  justify-between">
+          <div class="left-content flex">
+            <div>
+              <p>Active Cursor Part</p>
+            </div>
+            <div>
+              <p>Sharft : 12</p>
+            </div>
+            <div>
+              <p>Warp : 160</p>
+            </div>
+            <div>
+              <p>Weft : 52</p>
+            </div>
+            <div>
+              <p>EPI : 96</p>
+            </div>
+            <div>
+              <p>PPI : 54</p>
+            </div>
+            <div>
+              <p>Avg.EPI : 96</p>
+            </div>
+
+            <div>
+              <p>Avg.PPI : 54</p>
+            </div>
+          </div>
+
+          <div class="right-content flex">
+            <div>
+              <div>
+                <p>23||,18=</p>
+              </div>
+            </div>
+
+            <div>
+              <p>A ||</p>
+            </div>
+          </div>
+        </div>
+        <!-- statusbar -->
+      </div>
+
+
+
+
+
+
+
+
+      <!-- panel - toggle  -->
+
+      <div id="toggle-panel">
+        <!-- panel pencil  -->
+        <div class="toggle-content flex justify-center none" id="panel-pancil">
+          <form action="#" id="panel-form1" class="panel-form flex item-center justify-center">
+            <p class="bold panel-tital">pixel size</p>
+            <div class="X flex item-center justify-center">
+              <label for="X" class="label-pannel">X</label>
+              <input type="number" class="panel-box" name="X" id="X" />
+            </div>
+            <div class="X flex item-center justify-center">
+              <label for="Y" class="label-pannel">Y</label>
+              <input type="number" class="panel-box" name="Y" id="Y" />
+            </div>
+            <div class="close flex justify-center item-center ">
+              <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+            </div>
+          </form>
+        </div>
+
+        <!-- panel-expend  -->
+        <div class="toggle-content flex justify-center none" id="panel-expend">
+          <div class=" flex item-center justify-center ">
+            <form id="panel-pancil-form" class="panel-form  flex item-center justify-center ">
+              <p class="bold panel-tital">pixel size</p>
+              <div class="X flex item-center justify-center">
+                <label for="X" class="label-pannel">X</label>
+                <input type="number" class="panel-box" name="X" id="X" />
+              </div>
+              <div class="X flex item-center justify-center">
+                <label for="Y" class="label-pannel">Y</label>
+                <input type="number" class="panel-box" name="Y" id="Y" />
+              </div>
+              <div class="close flex justify-center item-center">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- panel-circle  -->
+
+        <div class="toggle-content flex justify-center none" id="panel-circle">
+          <div id="panal" class="panel flex justify-center  item-center">
+            <form action="#" id="form-circle" class="panel-form  flex item-center justify-center ">
+              <p class="bold panel-tital">pixel size </p>
+              <div class="X flex item-center justify-center">
+                <label for="X" class="label-pannel">X</label>
+                <input type="number" class="panel-box" name="X" id="X" />
+              </div>
+              <div class="X flex item-center justify-center">
+                <label for="Y" class="label-pannel">Y</label>
+                <input type="number" class="panel-box" name="Y" id="Y" />
+              </div>
+              <div class="radio-group  flex item-center justify-center">
+                <div class=" radio-item flex item-center">
+                  <label for="border" class="radio-label">Border</label>
+                  <input type="radio" id="border" value="border" name="radio-3" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="filled" class="radio-label">Filled</label>
+                  <input type="radio" id="filled" value="filled" name="radio-3" class="radio-button" />
+                </div>
+              </div>
+              <div class="close flex justify-center item-center ">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- panel-rectangle  -->
+        <div class="toggle-content flex justify-center none" id="panel-rectangle">
+          <div id="panal-rect" class="panel flex justify-center  item-center">
+            <form action="#" id="panel-rectangle-form" class="panel-form flex item-center justify-center">
+              <p class="bold panel-tital">pixel size</p>
+              <div class="X flex item-center justify-center">
+                <label for="rect-X" class="label-pannel">X</label>
+                <input type="number" class="panel-box" name="X" id="rect-X" />
+              </div>
+              <div class="X flex item-center justify-center">
+                <label for="rect-Y" class="label-pannel">Y</label>
+                <input type="number" class="panel-box" name="Y" id="rect-Y" />
+              </div>
+              <div class="radio-group  flex item-center justify-center">
+                <div class=" radio-item flex item-center">
+                  <label for="border-rect" class="radio-label">Border</label>
+                  <input type="radio" id="border-rect" value="border" name="radio-3" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="filled-rect" class="radio-label">Filled</label>
+                  <input type="radio" id="filled-rect" value="filled" name="radio-3" class="radio-button" />
+                </div>
+              </div>
+              <div class="close flex justify-center item-center ">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+
+        <!-- panel-square  -->
+
+
+        <div class="toggle-content flex justify-center none" id="panel-square">
+          <div id="panal-sqr" class="panel flex justify-center  item-center">
+            <form action="#" id="panel-square" class="panel-form flex item-center justify-center">
+              <div class="radio-group flex item-center justify-center" id="radio-4">
+                <div class=" radio-item flex item-center">
+                  <label for="sq-rectangle" class="radio-label">Rectangle</label>
+                  <input type="radio" id="sq-rectangle" value="sq-rectangle" name="radio-3" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="sq-circle" class="radio-label">circle</label>
+                  <input type="radio" id="sq-circle" value="sq-circle" name="radio-3" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="sq-polygonol" class="radio-label">polygonol</label>
+                  <input type="radio" id="sq-polygonol" value="horizontal" name="radio-3" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="sq-color" class="radio-label">color</label>
+                  <input type="radio" id="sq-color" value="sq-color" name="radio-3" class="radio-button" />
+                </div>
+
+
+              </div>
+              <div class="radio-group flex item-center justify-center" id="radio-5">
+                <p>(if active Colo)</p>
+                <div class=" radio-item flex item-center">
+                  <label for="Co-normal" class="radio-label">Normal</label>
+                  <input type="radio" id="Co-normal" value="sq-rectangle" name="radio-4" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="co-diagonal" class="radio-label">Diagonal</label>
+                  <input type="radio" id="co-diagonal" value="sq-circle" name="radio-4" class="radio-button" />
+                </div>
+              </div>
+              <div class="close flex justify-center item-center ">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+
+        <!-- panel can  -->
+        <div class="toggle-content flex justify-center none" id="panel-can">
+          <div id="panal-sqr" class="panel flex justify-center  item-center">
+            <form action="#" id="panel-can-form" class="panel-form flex item-center justify-center">
+              <div class="radio-group flex item-center justify-center" id="radio-5">
+                <div class=" radio-item flex item-center">
+                  <label for="can-rectangle" class="radio-label">Active Color</label>
+                  <input type="radio" id="can-rectangle" value="sq-rectangle" name="radio-4" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="can-circle" class="radio-label">weave on clipboard</label>
+                  <input type="radio" id="can-circle" value="can-circle" name="radio-4" class="radio-button" />
+                </div>
+
+
+
+              </div>
+              <!-- <div class="radio-group flex item-center justify-center" id="radio-6">
+                <div class=" radio-item flex item-center">
+                  <label for="can-normal" class="radio-label">Normal</label>
+                  <input type="radio" id="can-normal" value="can-normal" name="radio-5" class="radio-button" />
+                </div>
+                <div class=" radio-item flex item-center">
+                  <label for="can-diagonal" class="radio-label">Diagonal</label>
+                  <input type="radio" id="can-diagonal" value="can-diagonal" name="radio-5" class="radio-button" />
+                </div>
+              </div> -->
+
+              <div class="close flex justify-center item-center">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+
+        <!-- panel insert and remove  -->
+
+
+        <div class="toggle-content flex justify-center none" id="panel-insert">
+          <div id="panal-sqr" class="panel flex justify-center  item-center">
+            <form action="#" id="panel-remove&insert" class="panel-form flex item-center justify-center">
+              <div class="radio-group flex item-center justify-center">
+                <div class="radio-item flex item-center">
+                  <label for="box-straight" class="radio-label">Straight</label>
+                  <input type="radio" id="box-straight" value="straight" name="weft-radio" class="radio-button" />
+                </div>
+                <div class="radio-item flex item-center">
+                  <label for="box-pointed" class="radio-label">Pointed</label>
+                  <input type="radio" id="box-pointed" value="pointed" name="weft-radio" class="radio-button" />
+                </div>
+                <div class="radio-item flex item-center">
+                  <label for="box-line" class="radio-label">Line</label>
+                  <input type="radio" id="box-line" value="line" name="weft-radio" class="radio-button" />
+                </div>
+                <div class="radio-item flex item-center">
+                  <label for="box-manual" class="radio-label">Manual</label>
+                  <input type="radio" id="box-manual" value="manual" name="weft-radio" class="radio-button" />
+                </div>
+              </div>
+              <div class="close flex justify-center item-center ">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- F&X -->
+        <div class="toggle-content flex justify-center none" id="panel-fx">
+          <div id="panal-fx" class="panel flex justify-center  item-center">
+            <form action="#" id="panel-fx" class="panel-form flex item-center justify-center">
+              <div class="radio-group flex item-center justify-center">
+                <div class="radio-item flex item-center">
+                  <label for="box-regulator" class="radio-label">Regyulator</label>
+                  <input type="radio" id="box-regulator" value="regulator" name="fx-radio" class="radio-button" />
+                </div>
+                <div class="radio-item flex item-center">
+                  <label for="box-density" class="radio-label">Density</label>
+                  <input type="radio" id="box-density" value="density" name="fx-radio" class="radio-button" />
+                </div>
+              </div>
+              <div class="close flex justify-center item-center ">
+                <i class="fa-solid fa-xmark fa-2xs" style="color: #ffffff;"></i>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- nav section  -->
+  </div>
+
+
+
+  <!-- modal  -->
+  <div id="new-file-modal" class="modal">
+    <div class="modal-content">
+      <!-- Modal content goes here -->
+      <div class="close">
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-title">
+        <p>New File</p>
+      </div>
+      <div id="modal-desc">
+        <form id="new-file-form">
+          <div class="form-header" class="flex colunm">
+            <div class="first">
+              <div class="select-fabric">
+                <label for="fabric-type" class="first-label">Febric-type</label>
+                <select type="text" class="new-file-form-field" name="fabric-type" id="fabric-type" onchange="">
+                  <option value="plain">plain fabric</option>
+                  <option value="plt">platinum</option>
+                  <option value="ppop">pale</option>
+                  <option value="gih">aluminum</option>
+                </select>
+              </div>
+              <div class="num">
+                <label for="shaft" class="first-label">shaft</label>
+                <input type="number" min="0" max="40" class="new-file-form-field" id="shaft" name="shaft" />
+              </div>
+              <div class="unit">
+                <label for="unit" class="first-label">unit</label>
+                <select type="text" class="new-file-form-field" name="unit" id="unit" onchange="">
+                  <option value="inch">inch</option>
+                  <option value="cm">cm</option>
+
+                </select>
+              </div>
+            </div>
+
+            <div class="second flex justify-around">
+              <div class="quality">
+                <label for="Quality" class="first-label">Quality</label>
+                <select name="qt" id="qt" class="new-file-form-field">
+                  <option value="shirtng">shirting</option>
+                </select>
+              </div>
+              <div class="Reed">
+                <label for="reed" class="first-label">Reed</label>
+                <input type="number" name="reed" id="reed" min="0" class="new-file-form-field" />
+              </div>
+              <div class="in">
+                <label for="reed" class="first-label">&nbsp;</label>
+                <select name="inch" id="inch" class="new-file-form-field">
+                  <option value="1">/1 In</option>
+                  <option value="2">/2 In</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="middle">
+            <div class="form-group">
+              <div class="title">
+                <p>&nbsp;</p>
+              </div>
+              <div class="title">
+                <p>Left Salvage</p>
+              </div>
+              <div class="title">
+                <p>Body</p>
+              </div>
+              <div class="title">
+                <p>Right Salvage</p>
+              </div>
+              <div class="title">
+                <p>Total</p>
+              </div>
+              <div class="sub-title">
+                <p>Width </p>
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" name="width-Lsalvage" id="width-Lsalvage" class="new-file-form-field"
+                  step="0.25" />
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" name="width-body" id="width-body" class="new-file-form-field"
+                  step="0.25" />
+              </div>
+
+              <div class="content-input">
+
+                <input type="number" min="0" name="width-Rsalvage" id="width-Rsalvage" class="new-file-form-field"
+                  step="0.25" />
+              </div>
+              <div class="content-input">
+                <input type="number" name="width-total" id="width-total" class="pointer-none" disabled />
+              </div>
+
+              <!-- seconde-row  -->
+              <div class="sub-title">
+                <p>Dent </p>
+              </div>
+              <div class="content-input">
+                <input type="number" name="dent-Lsalvage" id="dent-Lsalvage" class="pointer-none" disabled />
+              </div>
+
+              <div class="content-input">
+                <input type="number" name="dent-body" id="dent-body" class="pointer-none" disabled />
+              </div>
+              <div class="content-input">
+                <input type="number" name="dent-Rsalvage" id="dent-Rsalvage" class="pointer-none" disabled />
+              </div>
+              <div class="content-input">
+                <input type="number" name="dent-total" id="dent-total" class="pointer-none" disabled />
+              </div>
+
+
+              <!-- third row  -->
+
+
+              <div class="sub-title">
+                <p>Warp/Dent</p>
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" step="1" value="1" name="dentWarp-Lsalvage" id="dentWarp-Lsalvage"
+                  class="new-file-form-field" />
+              </div>
+
+              <div class="content-input">
+                <input type="number" min="0" value="1" name="dentWarp-body" id="dentWarp-body"
+                  class="new-file-form-field" />
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" value="1" name="dentWarp-Rsalvage" id="dentWarp-Rsalvage"
+                  class="new-file-form-field" />
+              </div>
+
+              <div>
+                &nbsp;
+              </div>
+
+              <!-- forth row  -->
+              <div class="sub-title">
+                <p>Total Warp</p>
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" name="Total-Lsalvage" id="Total-Lsalvage" class="pointer-none" />
+              </div>
+
+              <div class="content-input">
+                <input type="number" min="0" name="Total-body" id="Total-body" class="pointer-none" />
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" name="Total-Rsalvage" id="Total-Rsalvage" class="pointer-none" />
+              </div>
+              <div class="content-input">
+                <input type="number" min="0" name="Total-warp-total" id="Total-warp-total" class="pointer-none" />
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="bottom-form flex colunm">
+            <div class="bottom-upper flex justify-between">
+              <div class="flex form-item item-center justify-between">
+                <label for="warp-dencity" class="upper-label">Warp Dencity</label>
+                <input type="number" min="0" name="warp-dencity" id="warp-dencity"
+                  class="pointer-none new-file-form-field" disabled>
+
+              </div>
+
+              <div class="flex form-item   item-center justify-around">
+                <label for="weft-dencity" class="upper-label">Weft Dencity</label>
+                <input type="number" min="0" name="weft-dencity" id="weft-dencity" class="new-file-form-field">
+              </div>
+
+
+            </div>
+            <div class="bottom-lower">
+              <div class="flex justify-around item-center">
+                <label for="design-height" class="">Design Height</label>
+                <input type="number" min="0" name="design-height" id="design-height" class="new-file-form-field">
+              </div>
+              <div class="flex justify-around  item-center">
+                <label for="design-width" class="footer-title">Weft Height</label>
+                <input type="number" min="0" name="weft-height" id="weft-height" class="new-file-form-field">
+              </div>
+              <div class="flex justify-around  item-center">
+                <label for="grid-height" class="footer-title">Grid Height</label>
+                <input type="number" min="0" name="grid-height" id="grid-height" class="new-file-form-field">
+              </div>
+
+              <div class="flex justify-around  item-center">
+                <label for="design-width">Design Width</label>
+                <input type="number" min="0" name="design-width" id="design-width" class="new-file-form-field" />
+              </div>
+              <div class="flex justify-around  item-center">
+                <label for="warp-width">Warp Width</label>
+                <input type="number" min="0" name="warp-width" id="warp-width" class="new-file-form-field">
+              </div>
+              <div class="flex justify-around  item-center">
+                <label for="grid-width">Grid Width</label>
+                <input type="number" min="0" name="grid-width" id="grid-width" class="new-file-form-field">
+              </div>
+            </div>
+          </div>
+          <hr>
+          <!-- footer form  -->
+
+          <div class="btn-group flex justify-around">
+            <!-- create a three button in html  -->
+            <button type="button" id="new-file-apply" class="btn-submit">apply</button>
+            <button type="button" id="new-file-submit" class="btn-submit">ok</button>
+            <button type="button" id="btn-cancel" class="btn-submit btn-cancel">cancel</button>
+
+          </div>
+        </form>
+      </div>
+
+
+
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- modal-Editsequance  -->
+  <div id="edit-sequance-modal" class="modal">
+    <div class="modal-content">
+      <!-- Modal content goes here -->
+      <div class="close">
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-title">
+
+      </div>
+      <div class="modal-desc">
+        <form action="#" class="flex colunm justify-center  modal-form item-center">
+          <div class="text-area">
+            <textarea name="warpWeftEditnumber" id="warpWeftEditnumber" cols="30" rows="10"></textarea>
+          </div>
+          <div class="sequance-area flex item-center gap-5">
+            <label for="totalWarpWeft" id="totalWarpWeftLabel">Total Warp</label>
+            <input type="number" name="totalWarpWeft" class="item-right" id="totalWarpWeft" readonly>
+          </div>
+          <hr>
+          <div class="btn-group">
+            <button type="button" class="btn-submit" id="edit-sequance-apply">Apply</button>
+            <button type="button" class="btn-submit" id="edit-sequance-ok">Ok</button>
+          </div>
+        </form>
+      </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- modal Edit/draft Num  -->
+
+  <div id="edit-draft-num-modal" class="modal">
+    <div class="modal-content">
+      <div class="close">
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-title">
+      </div>
+      <div class="modal-desc">
+        <form action="#" id="edit-draft-form" class="flex modal-form colunm justify-center item-center">
+          <div class="text-area">
+            <textarea name="draft-edit-num" id="draft-edit-num" cols="30" rows="20"></textarea>
+          </div>
+          <div class="sequance-area flex item-center justify-center gap-5">
+            <label for="total-end-dent">Total End/Dent</label>
+            <input name="total-end-dent" class="item-right" id="total-end-dent" readonly>
+          </div>
+          <hr>
+          <div class="btn-group">
+            <button class="btn-submit" type="button" id="edit-draft-apply">Apply</button>
+            <button class="btn-submit" type="button" id="edit-draft-ok">ok</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Edit pag-pan number  -->
+
+
+
+  <div id="pegplan-modal" class="modal">
+    <div class="modal-content">
+      <div class="close">
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-title">
+
+      </div>
+      <div class="modal-desc">
+        <form action="#" id="edit-draft-form" class="flex modal-form colunm justify-center item-center">
+          <div class="text-area">
+            <textarea name="pegplan-edit-num" id="pegplan-edit-num" cols="30" rows="20"></textarea>
+          </div>
+          <div class="sequance-area flex item-center justify-center gap-5">
+            <label for="total-picks">Total Picks</label>
+            <input type="number" name="total-picks" class="item-right" id="total-picks" readonly>
+          </div>
+          <hr>
+          <div class="btn-group">
+            <button type="button" class="btn-submit" id="pegplan-apply">Apply</button>
+            <button type="button" class="btn-submit" id="pegplan-ok">ok</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- modal-color  -->
+
+  <div id="color-modal" class="modal">
+    <div class="modal-content">
+      <!-- Modal content goes here -->
+      <div class="close">
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-title">
+        <p></p>
+      </div>
+      <div id="modal-desc">
+        <form id="form-color-modal">
+          <div class="form-Upper flex item-center">
+            <div class="activeYarn">
+              <div class="flex item-center justify-around">
+                <div class="item-center" style="display: flex;flex-direction: row;">
+                  <label for="actviveYarn">Active Yarn</label>
+                  <input type="text" id="model-letter-box" value="A" readonly>
+                  <div style="display: flex;flex-direction: column;margin-left: 5px;">
+                    <i id="increaseBtn">▲</i>
+                    <i id="decreaseBtn">▼</i>
+                  </div>
+
+
+                </div>
+                <select id="model-warp-weft-selection">
+
+                  <option value="warp">Warp</option>
+                  <option value="weft">Weft</option>
+                </select>
+              </div>
+              <div>
+                <div class="upper-bottom">
+                  <div class="color-name flex item-center">
+                    <label for="color-name">Name</label>
+                    <input type="text" id="name-input">
+                  </div>
+                  <div class="type-selector flex item-center">
+                    <label for="type-selector">Type</label>
+                    <select id="type-selector">
+                      <option value="polyester">polyester</option>
+                      <option value="polyester">polyester</option>
+                      <option value="polyester">polyester</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="oldAndNewColor">
+              <input type="color" id="model-color">
+            </div>
+
+          </div>
+
+
+          <div class="btn flex justify-around">
+            <button class="btn-submit" type="button" id="model-apply">apply</button>
+            <button type="button" class="btn-submit" id="model-ok">Ok</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- full screen modal -->
+
+  <div id="init-modal" class="modal">
+    <div class="modal-content">
+      <!-- Modal content goes here -->
+      <div class="close">
+        <span class="close-button">&times;</span>
+      </div>
+      <div class="modal-title">
+        <p>Full Screen</p>
+      </div>
+      <div>
+        <p>Do You Want To Open On Full Screen</p>
+      </div>
+      <div class="btn flex justify-around">
+        <button class="btn-submit" type="button" id="model-apply">apply</button>
+        <button type="button" class="btn-submit" id="model-ok">Ok</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- side bar  -->
+  <div class="overlay"></div>
+
+  <div class="drawer">
+    <!-- Drawer content goes here -->
+    <i class="fa-solid fa-xmark close-drawer"></i>
+    <ul id="contentOfsideBar" class=" flex colunm justify-center item-center">
+      <div class="search flex item-center justify-between">
+        <input type="search" name="" id="" placeholder="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <hr>
+      <li class="side-item flex item-center">
+
+        <a href="#Home" class="text-black"> <i class="fa-solid fa-home  menu-icon purple-icon"></i>&nbsp; Home</a>
+      </li>
+      <li class="side-item flex item-center">
+
+        <a href="#esignTool" class="text-black"><i class="fa-solid fa-tools menu-icon purple-icon"></i>&nbsp; Design
+          Tool</a>
+      </li>
+      <li class="side-item flex item-center">
+
+        <a href="#tools" class="text-black"> <i class="fa-solid fa-toolbox menu-icon purple-icon"></i>&nbsp; Tool</a>
+      </li>
+      <li class="side-item flex item-center">
+
+        <a href="#settings" class="text-black"> <i class="fa-solid fa-gear menu-icon purple-icon"></i>&nbsp; Setting</a>
+      </li>
+    </ul>
+  </div>
+  <!-- color penal  -->
+
+
+
+
+</body>
+
+</html>
